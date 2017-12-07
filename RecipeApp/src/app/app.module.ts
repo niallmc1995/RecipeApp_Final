@@ -20,6 +20,7 @@ import { MatButtonModule, MatCardModule, MatFormFieldModule, MatToolbarModule, M
 import { NotificationComponent } from './notification/notification.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { AuthService } from './services/auth.service';
+import { SearchRecipesComponent } from './search-recipes/search-recipes.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -37,7 +38,8 @@ const routes: Routes = [
     NavbarComponent,
     ProductsComponent,
     HomeComponent,
-    NotificationComponent
+    NotificationComponent,
+    SearchRecipesComponent
   ],
   imports: [
     BrowserModule,
