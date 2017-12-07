@@ -1,0 +1,6 @@
+.mat-toolbar.mat-primary {
+    background: rgba(255, 94, 0, 0.856);
+  }
+.fill-remaining-space {
+   flex: 1 1 auto;
+  }
