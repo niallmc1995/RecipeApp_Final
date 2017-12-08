@@ -22,13 +22,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthService } from './services/auth.service';
 import { SearchRecipesComponent } from './search-recipes/search-recipes.component';
 import { StarRatingComponent } from './shared/star-rating/star-rating.component';
+import { DiscoverComponent } from './discover/discover.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'products', component: ProductsComponent, canActivate: [AuthGuard] },
-  { path: 'signup', component: SignupComponent }
+  { path: 'signup', component: SignupComponent },
+  { path: 'discover', component: DiscoverComponent }
 ];
 
 @NgModule({
@@ -41,7 +43,8 @@ const routes: Routes = [
     HomeComponent,
     NotificationComponent,
     SearchRecipesComponent,
-    StarRatingComponent
+    StarRatingComponent,
+    DiscoverComponent
   ],
   imports: [
     BrowserModule,
