@@ -59,7 +59,7 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then((user) => {
         if (user.emailVerified) {
-          this.router.navigate(['products']);
+          this.router.navigate(['recipes']);
           // Redirect the user here
         } else {
           const message = 'A verification email has been sent, please check your email and follow the steps!';

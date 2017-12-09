@@ -14,7 +14,7 @@
       </div>
       <div class='row'>
           <div class='col-md-6'>
-              <h3>Filtered by: {{listFilter}}</h3>
+              <h3>Search Recipes by Name: {{listFilter}}</h3>
           </div>
       </div>
       <div class='table-responsive'>
@@ -27,8 +27,8 @@
                           </button>
                       </th>
                       <th></th>
-                      <th>Recipe</th>
-                      <th>Ingredients</th>
+                      <th>Recipe Name</th>
+                      <th>Ingredients Needed</th>
                       <th>Price</th>
                       <th>5 Star Rating</th>
                   </tr>
@@ -40,13 +40,14 @@
                     <img *ngIf='showImage' 
                     [src]='recipe.imageUrl'[title]='recipe.recipeName'
                     [style.width.px] = 'imageWidth'
+                    [style.height.px] = 'imageHeight'
                     [style.margin.px] = 'imageMargin'>
                   </td>
                   <td></td>
                   <td>{{ recipe.recipeName }}</td>
                   <td>{{ recipe.recipeIngredients }}</td>
                   <td>{{ recipe.recipePrice | currency:'EUR': true:'1.2-2' }}</td>
-                  <td>{{ recipe.starRating }}</td>
+                  <!-- <td>{{ recipe.starRating }}</td> -->
                   <td><app-star-rating [rating]= 'recipe.starRating'></app-star-rating></td>
                </tr>
               </tbody>

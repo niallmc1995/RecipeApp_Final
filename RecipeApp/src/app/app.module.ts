@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'products', component: ProductsComponent, canActivate: [AuthGuard] },
+  { path: 'recipes', component: ProductsComponent, canActivate: [AuthGuard] },
   { path: 'signup', component: SignupComponent },
   { path: 'discover', component: DiscoverComponent }
 ];
