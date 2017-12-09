@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase';
+import { RecipeServiceService } from './services/recipe-service.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [RecipeServiceService]
 })
 export class AppComponent implements OnInit {
   title = 'app';

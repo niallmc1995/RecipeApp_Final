@@ -23,6 +23,7 @@ import { AuthService } from './services/auth.service';
 import { SearchRecipesComponent } from './search-recipes/search-recipes.component';
 import { StarRatingComponent } from './shared/star-rating/star-rating.component';
 import { DiscoverComponent } from './discover/discover.component';
+import { HttpClientModule, HttpClient} from '@angular/common/http';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -58,12 +59,14 @@ const routes: Routes = [
     MatListModule,
     FormsModule,
     BrowserAnimationsModule,
-
+    HttpClientModule,
+   
+  
     AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService, AuthGuard, NotificationService],
+  providers: [AuthService, AuthGuard, NotificationService, AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
