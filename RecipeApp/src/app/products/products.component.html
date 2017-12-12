@@ -24,11 +24,14 @@
                               {{showImage ? 'Hide' : 'Show'}} Image
                           </button>
                       </th>
-                      <th></th>
+                      
                       <th>Recipe Name</th>
                       <th>Ingredients Needed</th>
                       <th>Price</th>
                       <th>5 Star Rating</th>
+                      <th> <button class='btn' (click) = 'toggleInstructions()'>
+                            {{showInstructions ? 'Hide' : 'Show'}} Instructions
+                    </button></th>
                   </tr>
               </thead>
               <tbody>
@@ -41,14 +44,16 @@
                     [style.height.px] = 'imageHeight'
                     [style.margin.px] = 'imageMargin'>
                   </td>
-                  <td></td>
                   <td>{{ recipe.recipeName }}</td>
                   <td>{{ recipe.recipeIngredients }}</td>
                   <td>{{ recipe.recipePrice | currency:'EUR': true:'1.2-2' }}</td>
                   <td><app-star-rating [rating]= 'recipe.starRating'></app-star-rating></td>
-               </tr>
+                <td *ngIf='showInstructions' >{{ recipe.recipeInstructions }}</td>
+                 </tr>
               </tbody>
           </table>
+         
       </div>
+      
   </div>
 </div>

@@ -3,5 +3,6 @@ export interface IRecipe{
     recipeIngredients:string;
     recipePrice:number;
     starRating:number;
+    recipeInstructions:string;
     imageUrl:string;
 }

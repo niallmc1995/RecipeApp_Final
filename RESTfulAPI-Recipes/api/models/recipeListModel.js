@@ -15,6 +15,10 @@ var recipeSchema = new Schema({
         type: String,
         Required: 'Ingredients cannot be left blank.'
     },
+    recipeInstructions: {
+        type: String,
+        Required: 'Instructions cannot be left blank.'
+    },
     recipePrice: {
         type: Number,
         default: 0

@@ -8,11 +8,12 @@ import {RecipeServiceService} from '../services/recipe-service.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-
+  
   imageWidth: number = 150;
   imageHeight: number = 80;
   imageMargin: number = 2;
   showImage: boolean = true;
+  showInstructions: boolean = false;
   errorMessage: string;
   
   _listFilter: string;
@@ -27,44 +28,7 @@ export class ProductsComponent implements OnInit {
   filteredRecipes: IRecipe [];
   recipes: IRecipe[];
 
-  //data used before MongoDb
-//    = [
-//     {
-//       "recipeName": "Burger",
-//       "recipeIngredients": "Bun, Burger Meat, chips, Onion, Cheese",
-//       "recipePrice": 6.99,
-//       "starRating": 3.2,
-//       "imageUrl": "https://images.fastcompany.net/image/upload/w_596,c_limit,q_auto:best,f_auto,fl_lossy/wp-cms/uploads/2017/06/i-1-sonic-burger.jpg"
-//   },
-//   {
-//       "recipeName": "Pizza",
-//       "recipeIngredients": "Dough, Tinned Tomato, Toppings",
-//       "recipePrice": 7.50,
-//       "starRating": 4.2,
-//       "imageUrl": "https://vignette.wikia.nocookie.net/slenderfortressnonofficial/images/f/f4/Pizza.png/revision/latest?cb=20160402023758"
-//   },
-//   {
-//       "recipeName": "Salad",
-//       "recipeIngredients": "Lettuce, Tomato, Onion, Peppers, Dressing",
-//       "recipePrice": 4.00,
-//       "starRating": 4.8,
-//       "imageUrl": "https://i.pinimg.com/736x/89/fa/0d/89fa0d169e06d956dfed656f65bf2357--easy-beef-stroganoff-stroganoff-recipe.jpg"
-//   },
-//   {
-//       "recipeName": "Cake",
-//       "recipeIngredients": "Chocolate, Eggs, Flour, Vanilla Essence",
-//       "recipePrice": 5.50,
-//       "starRating": 3.7,
-//       "imageUrl": "http://www.primrose-bakery.co.uk/shop/content/images/thumbs/0000362_chocolate-layer-cake.jpeg"
-//   },
-//   {
-//       "recipeName": "Fish",
-//       "recipeIngredients": "Salmon, Lemon, Honey, Garlic",
-//       "recipePrice": 8.50,
-//       "starRating": 4.6,
-//       "imageUrl": "http://www.homerecipie.com/chickenstrips.jpg"
-//   }
-//  ]
+
 
 //used for dummy data
   // constructor() { 
@@ -82,6 +46,9 @@ export class ProductsComponent implements OnInit {
   toggleImage():void{
   this.showImage = !this.showImage;
 }
+toggleInstructions(){
+    this.showInstructions = !this.showInstructions;
+  }
 
 //used in RESTful API
 public ngOnInit():void {
