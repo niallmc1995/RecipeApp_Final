@@ -3,7 +3,7 @@ import { AuthGuard } from './services/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
-import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
@@ -28,6 +28,7 @@ import { AdvancedSearchComponent } from './advanced-search/advanced-search.compo
 import { CardsContainerComponent } from './cards-container/cards-container.component';
 import {APP_BASE_HREF} from '@angular/common';
 import { RecipequeryService } from './services/recipequery.service';
+import { ContactComponent } from './contact/contact.component';
 
 
 const routes: Routes = [
@@ -37,7 +38,8 @@ const routes: Routes = [
   { path: 'recipes', component: ProductsComponent, canActivate: [AuthGuard] },
   { path: 'signup', component: SignupComponent },
   { path: 'discover', component: DiscoverComponent },
-  {path: 'search', component: SearchRecipesComponent}
+  {path: 'search', component: SearchRecipesComponent},
+  {path: 'contact', component: ContactComponent},
 ];
 
 @NgModule({
@@ -54,6 +56,7 @@ const routes: Routes = [
     DiscoverComponent,
     AdvancedSearchComponent,
     CardsContainerComponent,
+    ContactComponent
    
     
   ],
@@ -70,6 +73,8 @@ const routes: Routes = [
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    
    
   
     AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
@@ -84,6 +89,7 @@ const routes: Routes = [
       ReactiveFormsModule,
       FormsModule,
       FormBuilder,
+     
        RecipequeryService, {provide: APP_BASE_HREF, useValue : '' }],
   bootstrap: [AppComponent]
 })

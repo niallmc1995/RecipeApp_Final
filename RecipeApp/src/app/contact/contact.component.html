@@ -1,0 +1,35 @@
+
+<form [formGroup]="rForm"  (ngSubmit)="addPost(rForm.value)" novalidate>
+    <h1>Contact Form</h1>
+    <div class="form-group">
+      <label for="firstName">First Name
+        <input formControlName="firstName" id="firstName" type="text" class="form-control">
+      </label>
+
+      <div class="alert alert-danger"*ngIf="rForm.controls['firstName'].touched && !rForm.controls['firstName'].valid" >First Name is required</div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name
+      <input formControlName="lastName" id="lastName" type="text" class="form-control">
+    </label>
+    <div class="alert alert-danger" *ngIf="rForm.controls['lastName'].touched && !rForm.controls['lastName'].valid">Last Name is required</div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email
+      <input formControlName="email" id="email" type="text" class="form-control">
+    </label>
+    <div class="alert alert-danger" *ngIf="rForm.controls['email'].touched && !rForm.controls['email'].valid">Email is required</div>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message
+      <textarea formControlName="message" id="message" cols="30" rows="10" class="form-control"></textarea>
+    </label>
+    <div class="alert alert-danger" *ngIf="rForm.controls['message'].touched && !rForm.controls['message'].valid">Message is required</div>
+    </div>
+    <button class="btn btn-success" type="submit" value="Submit Form" [disabled]="!rForm.valid">Send Message</button>
+
+  </form>
+
