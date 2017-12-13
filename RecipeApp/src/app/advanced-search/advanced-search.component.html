@@ -1,0 +1,19 @@
+<div class="container-fluid">
+<form class="search" #f="ngForm" (ngSubmit)="search($event)">
+  
+          <!-- Words queries -->
+          <div class="row">
+              <div class="col-lg-6 col-md-12">
+                  <div class="form-group">
+                      <b>Search keywords:</b>
+                      <input size="30" height="100" class="isearch" name="searchQuery.query" [(ngModel)]="searchQuery.query" minlength="3" placeholder="i.e. chicken, bacon...">
+                      <button type="submit" class="btn btn-warning"><b>Search</b></button>
+                    </div>
+                 
+              </div>
+  
+              
+          </div>
+          
+    </form>
+    </div>

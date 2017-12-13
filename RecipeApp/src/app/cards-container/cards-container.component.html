@@ -1,0 +1,30 @@
+<div class="container">
+  
+      <div *ngIf="recipes">
+  
+          <h4>{{title}}</h4>
+          <br>
+  
+          <div class="row">
+  
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 recipecard" *ngFor="let recipe of recipes">
+                  <div class="card-group">
+                      <div class="card">
+                        
+                              <div class="row container-image">
+                                  <img class="img-fluid" src="{{imageurl}}{{recipe.image}}">
+                              </div>
+                              <div class="card-block">
+                                  <p class="card-title">{{recipe.title}}</p>
+                                  
+                                  <p class="card-text align-middle">Preparing time: {{recipe.readyInMinutes}} min </p>
+                                  
+                              </div>
+                            
+                         
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>

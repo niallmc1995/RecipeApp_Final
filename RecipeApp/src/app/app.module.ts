@@ -3,7 +3,7 @@ import { AuthGuard } from './services/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
@@ -24,6 +24,10 @@ import { SearchRecipesComponent } from './search-recipes/search-recipes.componen
 import { StarRatingComponent } from './shared/star-rating/star-rating.component';
 import { DiscoverComponent } from './discover/discover.component';
 import { HttpClientModule, HttpClient} from '@angular/common/http';
+import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
+import { CardsContainerComponent } from './cards-container/cards-container.component';
+import {APP_BASE_HREF} from '@angular/common';
+import { RecipequeryService } from './services/recipequery.service';
 
 
 const routes: Routes = [
@@ -32,7 +36,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'recipes', component: ProductsComponent, canActivate: [AuthGuard] },
   { path: 'signup', component: SignupComponent },
-  { path: 'discover', component: DiscoverComponent }
+  { path: 'discover', component: DiscoverComponent },
+  {path: 'search', component: SearchRecipesComponent}
 ];
 
 @NgModule({
@@ -47,6 +52,8 @@ const routes: Routes = [
     SearchRecipesComponent,
     StarRatingComponent,
     DiscoverComponent,
+    AdvancedSearchComponent,
+    CardsContainerComponent,
    
     
   ],
@@ -69,7 +76,15 @@ const routes: Routes = [
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService, AuthGuard, NotificationService, AppComponent],
+  providers: [
+  AuthService,
+     AuthGuard,
+      NotificationService, 
+      AppComponent, 
+      ReactiveFormsModule,
+      FormsModule,
+      FormBuilder,
+       RecipequeryService, {provide: APP_BASE_HREF, useValue : '' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
