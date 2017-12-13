@@ -1,5 +1,4 @@
 
-
 <div class='panel panel-primary'>
  
   <div class='panel-body'>
@@ -36,7 +35,7 @@
               </thead>
               <tbody>
               
-                <tr *ngFor='let recipe of filteredRecipes'>
+                <tr  *ngFor='let recipe of filteredRecipes'>
                   <td>
                     <img *ngIf='showImage' 
                     [src]='recipe.imageUrl'[title]='recipe.recipeName'
