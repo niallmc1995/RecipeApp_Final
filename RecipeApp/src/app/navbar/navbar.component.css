@@ -1,6 +1,8 @@
-.mat-toolbar.mat-primary {
+nav {
     background: rgba(255, 94, 0, 0.856);
+    color: white;
   }
-.fill-remaining-space {
-   flex: 1 1 auto;
-  }
+
+li{
+  color: white;
+}

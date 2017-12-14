@@ -1,6 +1,6 @@
 
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormControl, FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+//import { FormControl, FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 
 
@@ -8,20 +8,20 @@ import { FormControl, FormBuilder, Validators, FormGroup } from '@angular/forms'
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
-  encapsulation: ViewEncapsulation.None
+  
 })
 
 export class ContactComponent implements OnInit {
 
-  rForm: FormGroup;
-  post: any;    //a property for submitted form
+  //rForm: FormGroup;
+  //post: any;    //a property for submitted form
 
 
   constructor() { }
 
   ngOnInit() {
 
-    this.rForm = new FormGroup({
+    //this.rForm = new FormGroup({
       
       // firstName: new FormControl('', {
       //   validators: Validators.required,
@@ -45,24 +45,24 @@ export class ContactComponent implements OnInit {
       //       })
       
       
-          })
+      //    })
           
           
   }
 
-  onSubmit() {
-    if (this.rForm.valid) {
-      console.log("Form Submitted!");
-      this.rForm.reset();
-    }
-  }
+ // onSubmit() {
+   // if (this.rForm.valid) {
+  //    console.log("Form Submitted!");
+    //  this.rForm.reset();
+    //}
+ // }
 
-  addPost(post) {
-    this.rForm.controls.firstName =post.firstName;
-    this.rForm.controls.lastName = post.lastName;
-    this.rForm.controls.email = post.email;
-    this.rForm.controls.message = post.message;
-  }
+ // addPost(post) {
+ //   this.rForm.controls.firstName =post.firstName;
+ //   this.rForm.controls.lastName = post.lastName;
+ //   this.rForm.controls.email = post.email;
+ //   this.rForm.controls.message = post.message;
+ // }
 
 }
 

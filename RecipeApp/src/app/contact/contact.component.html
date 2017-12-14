@@ -1,5 +1,5 @@
-
-<form [formGroup]="rForm"  (ngSubmit)="addPost(rForm.value)" novalidate>
+<div class="container-fluid"> 
+<form> <!--[formGroup]="rForm"  (ngSubmit)="addPost(rForm.value)" novalidate>-->
     <h1>Contact Form</h1>
     <div class="form-group">
       <label for="firstName">First Name
@@ -32,4 +32,6 @@
     <button class="btn btn-success" type="submit" value="Submit Form" [disabled]="!rForm.valid">Send Message</button>
 
   </form>
+  </div>
+
 

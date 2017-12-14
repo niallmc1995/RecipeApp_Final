@@ -39,7 +39,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'discover', component: DiscoverComponent },
   {path: 'search', component: SearchRecipesComponent},
-  {path: 'contact', component: ContactComponent},
+  {path: 'contact', component: ContactComponent, pathMatch: 'full' }, 
 ];
 
 @NgModule({
@@ -56,7 +56,7 @@ const routes: Routes = [
     DiscoverComponent,
     AdvancedSearchComponent,
     CardsContainerComponent,
-    ContactComponent
+    ContactComponent,
    
     
   ],
