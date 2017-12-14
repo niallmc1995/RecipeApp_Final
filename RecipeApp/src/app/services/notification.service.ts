@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
+//Niall 
 @Injectable()
 export class NotificationService {
   private sub = new Subject<any>();

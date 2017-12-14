@@ -1,3 +1,4 @@
+// David - schema used for RESTful api from MongoDB
 'use strict';
 
 var mongoose = require('mongoose');

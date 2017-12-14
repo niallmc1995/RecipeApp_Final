@@ -10,7 +10,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   
 })
 export class AdvancedSearchComponent implements OnInit {
-
+//Rowan - emits object to cards container
   @Output() searchAdvanced: EventEmitter<Object> = new EventEmitter<Object>();
   private searchQuery: Object = {};
   
@@ -18,7 +18,7 @@ export class AdvancedSearchComponent implements OnInit {
   
     search(event) {
   
-      event.preventDefault();
+     
 
       this.searchAdvanced.emit(this.searchQuery);
     }

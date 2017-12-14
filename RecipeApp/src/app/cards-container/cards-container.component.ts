@@ -8,7 +8,7 @@ import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angu
   styleUrls: ['./cards-container.component.css']
 })
 export class CardsContainerComponent implements OnInit, OnChanges{
-
+// Rowan - inputs from advanced search 
   @Input() recipes: Array<Object>;
   @Input() title: string = '';
   @Input() imageurl: string = 'https://spoonacular.com/recipeImages/';

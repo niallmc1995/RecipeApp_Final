@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificationComponent implements OnInit {
   // tslint:disable-next-line:no-inferrable-types
+
+  //Niall - notification logic
+
   display: boolean = false;
   message: string;
   constructor(private notifier: NotificationService) {

@@ -9,6 +9,8 @@ import {RecipeServiceService} from '../services/recipe-service.service';
 })
 export class ProductsComponent implements OnInit {
   
+  // Niall, David, Rowan - Toggle image & Instructions and subscribe to RESTful API Receipes
+
   imageWidth: number = 150;
   imageHeight: number = 80;
   imageMargin: number = 2;

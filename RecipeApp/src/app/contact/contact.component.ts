@@ -8,14 +8,14 @@ import { FormControl, FormBuilder, Validators, FormGroup } from '@angular/forms'
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None
 })
 
 export class ContactComponent implements OnInit {
 
   rForm: FormGroup;
   post: any;    //a property for submitted form
-
+  
 
   constructor() { }
 
@@ -23,26 +23,26 @@ export class ContactComponent implements OnInit {
 
     this.rForm = new FormGroup({
       
-      // firstName: new FormControl('', {
-      //   validators: Validators.required,
-      // updateOn: 'blur'
-      // }),
-      //       lastName: new FormControl('', {
-      //         validators: Validators.required,
-      //         updateOn: 'blur'
-      //       }),
+    //   firstName: new FormControl('', {
+    //     validators: Validators.required,
+    //   updateOn: 'blur'
+    //   }),
+    //         lastName: new FormControl('', {
+    //           validators: Validators.required,
+    //           updateOn: 'blur'
+    //         }),
       
-      //       email: new FormControl('', {
-      //         validators: [ Validators.email,Validators.required],
-      //         updateOn: 'blur'
-      //       }),
+    //         email: new FormControl('', {
+    //           validators: [ Validators.email,Validators.required],
+    //           updateOn: 'blur'
+    //         }),
       
             
       
-      //       message: new FormControl('', {
-      //         validators: Validators.required,
-      //         updateOn: 'change'
-      //       })
+    //         message: new FormControl('', {
+    //           validators: Validators.required,
+    //           updateOn: 'change'
+    //         })
       
       
           })
@@ -57,12 +57,12 @@ export class ContactComponent implements OnInit {
     }
   }
 
-  addPost(post) {
-    this.rForm.controls.firstName =post.firstName;
-    this.rForm.controls.lastName = post.lastName;
-    this.rForm.controls.email = post.email;
-    this.rForm.controls.message = post.message;
-  }
+  // addPost(post) {
+  //   this.rForm.controls.firstName = post.firstName;
+  //   this.rForm.controls.lastName = post.lastName;
+  //   this.rForm.controls.email = post.email;
+  //   this.rForm.controls.message = post.message;
+  // }
 
 }
 

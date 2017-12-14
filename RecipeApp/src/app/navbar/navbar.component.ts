@@ -12,6 +12,7 @@ export class NavbarComponent implements OnInit {
   isLoggedIn: boolean;
   constructor(private auth: AuthService) { }
 
+  // Niall - Login functions
   userLoggedIn() {
     this.isLoggedIn = this.auth.isLoggedIn();
   }
