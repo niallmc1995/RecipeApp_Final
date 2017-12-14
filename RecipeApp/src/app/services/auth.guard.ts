@@ -7,6 +7,7 @@ import { Observable } from 'rxjs/Observable';
 export class AuthGuard implements CanActivate {
   constructor(private auth: AuthService, private router: Router) { }
  
+  //Niall - authorisation for navigation
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {

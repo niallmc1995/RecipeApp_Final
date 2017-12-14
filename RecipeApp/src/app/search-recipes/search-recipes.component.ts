@@ -22,7 +22,7 @@ export class SearchRecipesComponent implements OnInit {
   constructor( private route: ActivatedRoute, private recipeservice: RecipequeryService) { }
 
   searchNew(event) {
-    // Perform a search with fresh parameters
+    //Rowan - Perform a search with fresh parameters
     this.defaultResults = 0;
     this.parameters = event;
 

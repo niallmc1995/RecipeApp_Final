@@ -12,6 +12,8 @@ export class LoginComponent implements OnInit {
   password: string;
   constructor(private auth: AuthService) { }
 
+// Niall - handles authorisation for login
+
   ngOnInit() {
   }
   login() {

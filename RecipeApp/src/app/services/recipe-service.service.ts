@@ -7,7 +7,7 @@ import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 
-
+//David - Recipe Service to call recipes from http://localhost:3000/recipes 
 
 // external api
 // const headerDict = {
